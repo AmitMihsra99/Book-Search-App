@@ -68,6 +68,7 @@ const App = () => {
     
     <Router>
       <Header onSearch={handleSearch} onFilter={handleFilter} />
+     {error && <p className="text-color-600-red ">something goes wrong while fetching data from the API</p> }
       <Routes>
         <Route path="/fav" element={<Favbook />} />
         <Route path="/" element={<BookList books={books} />} />
